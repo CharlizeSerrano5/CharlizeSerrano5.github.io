@@ -24,15 +24,16 @@ tw-story[tags~="Twine"] {
   background-size:cover;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Digital Art Curriculum" tags="Learning" position="159,8" size="100,100">#(text-color:#64A79B)+(text-style: &quot;underline&quot;)[Digital Art Curriculum]
-	Why is digital art important?
-	---
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Digital Art Curriculum" tags="Learning" position="158,8" size="100,100">#(text-color:#64A79B)+(text-style: &quot;underline&quot;)[Digital Art Curriculum]
+An interactive website to teach young adolescents about a form of digital art, interactive art through a specific software called Twine.	
+---
 &lt;img src=&quot;images/whatisdigitalart.png&quot; /&gt;
-A curriculum made by Charlize Serrano a (text-style:&quot;shudder&quot;)[High School Senior]
+A curriculum made by Charlize Serrano a High School Senior
 
-
-&lt;img src=&quot;https://dazedimg-dazedgroup.netdna-ssl.com/1280/azure/dazed-prod/1280/8/1288188.jpg&quot; /&gt;
+&lt;img src = &quot;https://d3k8cp7ga1ip8x.cloudfront.net/media/meural/254/zw56t08fpw4qxfm.thumb.png&quot; /&gt;
+&lt;img src=&quot;images/digitalartphoto.jpg&quot;/&gt;
 [[First Page (students go here)-&gt;Introduction + Learning Objectives]]
+
 
 
 
@@ -71,7 +72,7 @@ A curriculum made by Charlize Serrano a (text-style:&quot;shudder&quot;)[High Sc
 (link: &quot;save&quot;)[(save-game: &quot;file A&quot;)]
 
 (link: &quot;load&quot;)[(load-game: &quot;file A&quot;)]
-</tw-passagedata><tw-passagedata pid="2" name="What exactly is digital art? (exercise)" tags="" position="262,112" size="100,100">#Respond to the following
+</tw-passagedata><tw-passagedata pid="2" name="What exactly is digital art? (exercise)" tags="" position="264,112" size="100,100">#Respond to the following
 &#39;&#39;What do you think digital art is? &#39;&#39;Put your definition below.
 
 (input-box:2bind $Definition,&quot;X&quot;,&quot;Type your definition&quot;)
@@ -153,8 +154,8 @@ Link to Twine Games.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="5" name="Twine Basics + Basic Coding" tags="Learning" position="629,43" size="100,100">&#39;&#39;Twine Basics&#39;&#39;
-
+)</tw-passagedata><tw-passagedata pid="5" name="Twine Basics + Basic Coding" tags="Learning" position="629,42" size="100,100">#Twine Basics
+---
 For what we will first be learning we will be covering the three Twine Basics that you need to utilize Twine.
 * Creating Links
 * Adding Images
@@ -170,8 +171,12 @@ The look of the website will be determined by CSS which could be used for any we
 
 
 
+
+
+
 [[ If you would like to skip ahead to previous links...-&gt;Getting Your Twine Creation Started]]
 
+(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
 (enchant:?link,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
@@ -181,6 +186,18 @@ The look of the website will be determined by CSS which could be used for any we
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
+)
+(enchant:?passage,
+	(background:(white)) +
+	(corner-radius:20) +
+	(border:&quot;solid&quot;)+
+	(border-size:3)+
+	(border-color:(white))
+)
+(enchant:?page,
+     (text-color:black)+
+     (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
+     (font:&quot;Open Sans&quot;)
 )</tw-passagedata><tw-passagedata pid="6" name="Exercise (Notecards)" tags="" position="92,635" size="100,100"># NoteCard Activity
 Before getting to the actual production of the process you will be thinking up a couple of different stories
 
@@ -269,7 +286,9 @@ This software made back in 2009 proves to continue to be important today as it a
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
 )
-	</tw-passagedata><tw-passagedata pid="9" name="Digital Art Definition and Why is it used?" tags="Learning" position="107,241" size="100,100">#What is Digital Art?
+	</tw-passagedata><tw-passagedata pid="9" name="Digital Art Definition and Why is it used?" tags="Learning" position="107,241" size="100,100">(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
+
+#What is Digital Art?
 ---
 Some may describe digital art as simply art that is made through a digital medium, but that description by itself does not describe digital art as a whole. Sure it invovles art but it is not defined by that artist or the medium that is used.
 
@@ -338,7 +357,7 @@ A shortcut to making this link is by typing
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="11" name="Publishing" tags="Twine" position="883,263" size="100,100"># Publishing
+)</tw-passagedata><tw-passagedata pid="11" name="Publishing" tags="Twine" position="879,271" size="100,100"># Publishing
 ---
 Now that you have a functional website,
 	you can already publish your website onto a domain to share your work.
@@ -368,9 +387,16 @@ Download the actual github desktop.
 
 Create a reposititory --something along the lines of firstnamelastname.github
 
-Import the folder that you are working with.
+Go to the Repository tab and press &#39;&#39;Show in Explorer&#39;&#39;
+* This is where you will import all of your folders
+Every time you update your files you will have to copy the files into the &#39;&#39;Show in Explorer&#39;&#39;
+* After doing so you will be required to write a summary at the buttom -- a short name is fine.
+* You will then commit to main and push origin.
 
-Pushing Origin
+Your files are now posted to Github!
+
+To play the file you will have to go onto the broswer version of Github and copy and paste the file name at the top and put it into your browser.
+
 
 
 [[Your Turn!-&gt;Show us what you have made! (Activity)]]
@@ -635,7 +661,7 @@ Read if you want more information: Upon using Twine more often, variables will r
 )</tw-passagedata><tw-passagedata pid="23" name="Image Editing" tags="" position="1600,933" size="100,100">Images do not have to look as simple as you think in your website. You are also capable of exploring software options for image editing.
 
 [[Go Back-&gt;Things You Can Add onto Your Twine Creation]]</tw-passagedata><tw-passagedata pid="24" name="Video Editing" tags="" position="1742,856" size="100,100">While not required you can involve videos into your creation.
-[[Go Back-&gt;Things You Can Add onto Your Twine Creation]]</tw-passagedata><tw-passagedata pid="25" name="Interactive Art Introduction" tags="Learning" position="333,371" size="100,100">#What Type of Art are We Looking At?
+[[Go Back-&gt;Things You Can Add onto Your Twine Creation]]</tw-passagedata><tw-passagedata pid="25" name="Interactive Art Introduction" tags="Learning" position="337,382" size="100,100">#What Type of Art are We Looking At?
 With our journey in digital art we will be venturing in the most basic form of &#39;&#39;Interactive Art&#39;&#39;.
 ---
 Interactive Art is an art form that takes into consideration how the audience will interact with a piece.
@@ -813,7 +839,7 @@ See for example no matter what you type in this input, my code will force a cert
 	
 )[[Let&#39;s check out further examples, outside of Twine.-&gt;Interactive Story Example]]</tw-passagedata><tw-passagedata pid="33" name="Show us what you have made! (Activity)" tags="" position="1043,267" size="100,100">#What have you made?
 
-Post your creations using Github.
+Post all your creations using Github.
 [[If you need help-&gt;Publishing]]
 
 
@@ -829,7 +855,9 @@ Post your creations using Github.
 	(border-color:#7EBDB2) +
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))
-)	</tw-passagedata><tw-passagedata pid="34" name=" Follow Up of Notecard Exercise" tags="" position="272,674" size="100,100">&#39;&#39;What exactly are we doing?&#39;&#39;
+)	
+
+</tw-passagedata><tw-passagedata pid="34" name=" Follow Up of Notecard Exercise" tags="" position="272,674" size="100,100">&#39;&#39;What exactly are we doing?&#39;&#39;
 Notice how for every notecard you have made a link.
 Now I want you to take those notecards and holepunch the card to tie a piece of yarn between every notecard decision.
 
@@ -864,6 +892,11 @@ You are not required to start this project now rather you are to keep this in mi
 
 
 [[Now for actual learning.-&gt;Getting Started]]
+
+
+
+
+
 
 
 If you want to start the final prompt [[Final Prompt-&gt;Final Product]]
@@ -1152,9 +1185,9 @@ Twine still continues to have a variety of codes and interactive methods to acce
 
 8. [[Advice-&gt;Advice]] 
 
-[[Final Product-&gt;Final Product]]
+9. [[Final Product-&gt;Final Product]]
 
-[[Citations-&gt;Citations]]
+10. [[Citations-&gt;Citations]]
 
 
 (enchant: &quot;Table of Contents&quot;,
@@ -1201,7 +1234,7 @@ However, if you want to make sure that files do not get messed up you can organi
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="56" name="Image Exercise (Notecards Continued)" tags="" position="1098,143" size="100,100">Remember those notecards that you made earlier?
+)</tw-passagedata><tw-passagedata pid="56" name="Image Exercise (Notecards Continued)" tags="" position="1099,144" size="100,100">&#39;&#39;Remember those notecards that you made earlier?&#39;&#39;
 
 Draw on every single one of those notecards and recreate those notecards as links.
 
@@ -1231,6 +1264,18 @@ When you have finally finished adding your images notice how when you press play
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
+)
+(enchant:?page,
+     (text-color:black)+
+     (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
+     (font:&quot;Open Sans&quot;)
+)
+(enchant:?passage,
+	(background:(white)) +
+	(corner-radius:20) +
+	(border:&quot;solid&quot;)+
+	(border-size:3)+
+	(border-color:(white))
 )</tw-passagedata><tw-passagedata pid="57" name="Advice" tags="" position="1944,289" size="100,100">#Here is some advice
 &#39;&#39;Making a good looking website and how to organize your workflow&#39;&#39;
 
@@ -1301,7 +1346,7 @@ In case you want to review the curriculum.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="61" name="Introduction + Learning Objectives" tags="" position="393,117" size="100,100">(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
+)</tw-passagedata><tw-passagedata pid="61" name="Introduction + Learning Objectives" tags="" position="392,118" size="100,100">(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
 #(text-color:#64A79B)[Introduction] 
 ---
 In this curriculum we will be learning about digital art and its possibilities. We will encounter a type of digital art and an example of it through a specific software.
@@ -1569,7 +1614,7 @@ Let&#39;s see what Twine can do...
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="77" name="Short Show and Tell Activity" tags="" position="1238,293" size="100,100">Let&#39;s not forget the most important part.
+)</tw-passagedata><tw-passagedata pid="77" name="Short Show and Tell Activity" tags="" position="1232,311" size="100,100">Let&#39;s not forget the most important part.
 With sharing your stories comes development and fixes.
 
 Share with a peer your website and discuss what to improve on and what was challenging.
@@ -1628,6 +1673,14 @@ You will need to download these and rename them with all lowercase and no specia
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
+)
+
+(enchant:?passage,
+     (background:(white)) +
+     (corner-radius:20) +
+     (border:&quot;none&quot;, &quot;none&quot;, &quot;none&quot;, &quot;solid&quot;)+
+     (border-size:120) +
+     (border-color:#7EBDB2)
 )</tw-passagedata><tw-passagedata pid="79" name="Credits" tags="" position="2100,871" size="100,100">Non-Credited Art by Charlize Serrano
 Programming by Charlize Serrano
 
