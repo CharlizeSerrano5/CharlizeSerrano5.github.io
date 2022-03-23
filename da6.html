@@ -28,7 +28,7 @@ tw-story[tags~="Twine"] {
 #box
 {
 float: right;
-width: 300px;
+width: 350px;
 padding: 10px;
 border: solid;
 border-width: 5px;
@@ -47,18 +47,23 @@ width: 640px;
 input, textarea {
     color: #fff;
     background-color: #111;
-    border: 1px solid #444;
+    border: 1px solid #E6EBC8;
     padding: .4em;
 }
 
 
 
-
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Digital Art Curriculum" tags="Learning" position="158,8" size="100,100">#(text-color:#64A79B)+(text-style: &quot;underline&quot;)[Digital Art Curriculum]
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Digital Art Curriculum" tags="Learning" position="162,7" size="100,100">#(text-color:#64A79B)+(text-style: &quot;underline&quot;)[Digital Art Curriculum]
 An &#39;&#39;interactive website&#39;&#39; to teach young adolescents about a form of digital art, interactive art.	
----
-&lt;img src=&quot;images/whatisdigitalart.png&quot; /&gt;
+
 A curriculum lesson plan made by Charlize Serrano a High School Senior
+---
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+&lt;img src=&quot;images/whatisdigitalart.png&quot; /&gt;
 
 &lt;img src=&quot;images/digitalartphoto.jpg&quot;/&gt;
 [[First Page (students go here)-&gt;Introduction + Learning Objectives]]
@@ -75,33 +80,53 @@ A curriculum lesson plan made by Charlize Serrano a High School Senior
 
 
 &lt;span id=&quot;box&quot;&gt;  
-	 [(text-colour:grey)[ [[Teacher Notes-&gt;Teacher Notes]]
+(align:&quot;==&gt;&quot;)[(box:&quot;X&quot;)[ [(text-colour:grey)[ [[Teacher Notes-&gt;Teacher Notes]]
 	 
-	 [[Table of Contents-&gt;Table of Contents]]]
+	 [[Table of Contents-&gt;Table of Contents]]]]]
 ]
 (enchant: &quot;Digital Art Curriculum&quot;,
-	(background:#7EBDB2) +
+    (background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
 	(color:white) +
 	(corner-radius: 12) +
 	(border-color:#7EBDB2) +
-	(border-size:2)
-)	
-(enchant:?link,
+	(border-size:1)
+	)
+(enchant: &quot;First Page (students go here)&quot;,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
 	(color:white) +
 	(corner-radius: 12) +
 	(border-color:#7EBDB2) +
 	(border-size:1) +
-	(hover-style: (bg:#64A79B) + (border-color:#64A79B)))	
+	(hover-style: (bg:#64A79B) + (border-color:#64A79B)))
+(enchant: &quot;Teacher Notes&quot;,
+	(background:#C1D2E7) +
+	(border:&#39;solid&#39;) +
+	(color:white) +
+	(corner-radius: 12) +
+	(border-color:#C1D2E7) +
+	(border-size:1) +
+	(hover-style: (bg:#9EB6D6) + (border-color:#9EB6D6)))
+(enchant: &quot;Table of Contents&quot;,
+	(background:#C1D2E7) +
+	(border:&#39;solid&#39;) +
+	(color:white) +
+	(corner-radius: 12) +
+	(border-color:#C1D2E7) +
+	(border-size:1) +
+	(hover-style: (bg:#9EB6D6) + (border-color:#9EB6D6)))	
 (enchant:?page,
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
-     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="2" name="What exactly is digital art? (exercise)" tags="" position="264,112" size="100,100">#(text-color:#64A79B)[Respond to the following]
+     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="2" name="What exactly is digital art? (exercise)" tags="" position="265,113" size="100,100">#Let&#39;s Begin Your Exploration,
+(if: $Name is not 0)[Hello (print: $Name),]
+(text-color:#64A79B)[&#39;&#39;Respond to the following&#39;&#39;]
+
 &#39;&#39;What do you think digital art is? &#39;&#39;Put your definition below.
 
-(input-box:2bind $Definition,&quot;X&quot;,&quot;Type your definition&quot;)
+
+(input-box:2bind $Definition,&quot;X&quot;,5, &quot;Double-click to type your definition&quot;)
 
 [[Digital Art Definition and Why is it used?-&gt;Digital Art Definition and Why is it used?]]
 
@@ -144,8 +169,10 @@ Without needing the requirement of drawing, one&#39;s creativity is capable of s
 * You will be using this software to specifially make story codes
 * You may include art but that is not required
 
+(checkbox: 2bind $drawing,&quot;Do you have an interest in drawing?&quot;)
 
-[[Here are some examples-&gt;Examples]]
+
+[[Here are some examples-&gt;Twine Examples]]
 
 (enchant:?link,
 	(background:#7EBDB2) +
@@ -162,12 +189,28 @@ Without needing the requirement of drawing, one&#39;s creativity is capable of s
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="4" name="Examples" tags="" position="54,387" size="100,100">#(text-color:#64A79B)[Here are some examples of games]
-(link: &quot;The Temple of No&quot;)[(open-url: &quot;https://crowscrowscrows.itch.io/the-temple-of-no&quot;)]
-* a cartoon styled interactive Twine story
-(text-style:&quot;superscript&quot;)
-[Copy if button above doesn&#39;t work https://crowscrowscrows.itch.io/the-temple-of-no]
+)</tw-passagedata><tw-passagedata pid="4" name="Twine Examples" tags="" position="54,387" size="100,100">#(text-color:#64A79B)[Here are some examples of games]
+&#39;&#39;Reminder:&#39;&#39; there might be audio on the websites. 
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+[&lt;img src=&#39;https://img.itch.zone/aW1hZ2UvNDA4MjIzLzIwMjY3NjQucG5n/original/4T26H5.png&#39;&gt;]&lt;hook-name|
+(click: ?hook-name)[(open-url: &quot;https://natnatart.itch.io/plantgotchi&quot;)]
+(link: &quot;Plant Gotchi&quot;)[(open-url: &quot;https://natnatart.itch.io/plantgotchi
+&quot;)]
+* a pixel art styled game where you take care of a tamagotchi that is a plant
+[Copy if button above doesn&#39;t work https://natnatart.itch.io/plantgotchi]
 
+
+
+
+[&lt;img src=&#39;https://img.itch.zone/aW1hZ2UvNDA4NzA0LzIwMzMwOTMucG5n/original/vAo2fy.png&#39;&gt;]&lt;hook-name|
+(click: ?hook-name)[(open-url: &quot;https://kryptickitty.itch.io/who-stole-my-bone&quot;)]
+(link: &quot;Who Stole My Bone?&quot;)[(open-url: &quot;https://kryptickitty.itch.io/who-stole-my-bone&quot;)]
+* a detective game where you help find a dog bone
+[Copy if button above doesn&#39;t work https://kryptickitty.itch.io/who-stole-my-bone]
 
 
 
@@ -175,9 +218,12 @@ Without needing the requirement of drawing, one&#39;s creativity is capable of s
 See how in every example, players and readers can make their own choices.
 Look through these examples to see how they utilized Twine.
 Link to Twine Games.
+
+
+
 [[Time for a small activity!-&gt;Paper Fortune Teller Activity]]
 
-(enchant:?link,
+(enchant: &quot;Plant Gotchi&quot;,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
 	(color:white) +
@@ -186,7 +232,28 @@ Link to Twine Games.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="5" name="Twine Basics + Basic Coding" tags="Learning" position="629,42" size="100,100">#Twine Basics
+)
+(enchant: &quot;Who Stole My Bone?&quot;,
+	(background:#7EBDB2) +
+	(border:&#39;solid&#39;) +
+	(color:white) +
+	(corner-radius: 12) +
+	(border-color:#7EBDB2) +
+	(border-size:1) +
+	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
+	
+)
+
+(enchant: &quot;Time for a small activity!&quot;,
+	(background:#7EBDB2) +
+	(border:&#39;solid&#39;) +
+	(color:white) +
+	(corner-radius: 12) +
+	(border-color:#7EBDB2) +
+	(border-size:1) +
+	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
+	
+)</tw-passagedata><tw-passagedata pid="5" name="Twine Basics + Basic Coding" tags="Learning" position="618,46" size="100,100">#Twine Basics
 ---
 For what we will first be learning we will be covering the three Twine Basics that you need to utilize Twine.
 * Creating Links
@@ -230,7 +297,7 @@ The look of the website will be determined by CSS which could be used for any we
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="6" name="Exercise (Notecards)" tags="" position="92,635" size="100,100">#(text-color:#64A79B)NoteCard Activity
+)</tw-passagedata><tw-passagedata pid="6" name="Exercise (Notecards)" tags="" position="81,638" size="100,100">#(text-color:#64A79B)NoteCard Activity
 Before getting to the actual production of the process you will be thinking up a couple of different stories
 
 I want you to make an adventure decision story of vacations you have been on, except there is a twist... You will be adding a little bit of (text-style:&quot;smear&quot;,&quot;sway&quot;)[imagination] to it.
@@ -263,7 +330,7 @@ On the back of the notecard you will put what notecard to go to next
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
 )
-	</tw-passagedata><tw-passagedata pid="7" name="Making Decisions" tags="" position="346,502" size="100,100">#(text-color:#64A79B)Why does this matter?
+	</tw-passagedata><tw-passagedata pid="7" name="Making Decisions" tags="" position="346,502" size="100,100">#(text-color:#64A79B)[Why does this matter?]
 
 Imagine you were creating a game with multiple endings.
 
@@ -291,7 +358,7 @@ Interactive art is like this, &#39;&#39;how an audience places input on a piece 
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
 )
-	</tw-passagedata><tw-passagedata pid="8" name="What is Twine and Why Twine?" tags="" position="440,691" size="100,100">#(text-color:#64A79B)[What is Twine?]
+	</tw-passagedata><tw-passagedata pid="8" name="What is Twine and Why Twine?" tags="" position="394,696" size="100,100">#(text-color:#64A79B)[What is Twine?]
 ---
 	Twine is an open source tool that allows storytelling and basic coding on either the browser or on a software.
 	
@@ -301,7 +368,13 @@ This software made back in 2009 proves to continue to be important today as it a
 * Basics such as HTML coding and CSS coding are introduced in a basic and non-threatening way to early learners.
 
 
-[[Now what exactly can you do on this program?-&gt;What Twine Can Do?]]
+
+Twine allows for a truly interactive story.
+
+Not only are people capable of creating a story, they are capable of coding movement in their ideas without necessarily the knowledge of coding.
+
+[[How is this interactive?-&gt;How is this interactive?]]
+
 
 
 (enchant:?link,
@@ -331,11 +404,11 @@ Some may describe digital art as simply art that is made through a digital mediu
 
 It&#39;s modern use and feel allows artists to further relate to a modern people.
 
-Realistically Digital Art can be used for anything. It is simply an expression of creativity displayed through modern mediums.
+Realistically digital art can be used for anything. It is simply an expression of creativity displayed through modern mediums.
 
 
 
-Does this match your definition?
+&#39;&#39;Does this match your definition?&#39;&#39;
 (if:$Definition is 0)[* You forgot to answer, [[go back to the previous page-&gt;What exactly is digital art? (exercise)]].]
 (else:)[* You answered &quot;(print: $Definition)&quot;]
 
@@ -354,6 +427,11 @@ Does this match your definition?
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
 )</tw-passagedata><tw-passagedata pid="10" name="Links: Most basic and most used button." tags="Twine" position="751,22" size="100,100"># Links
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
 ---
 What connects each decision and each web page, a link is the most basic and most used functions within Twine.
 You will be using links to move between webpages.
@@ -458,15 +536,21 @@ To play the file you will have to go onto the broswer version of Github and copy
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="12" name="Examples of Digital Art" tags="" position="404,239" size="100,100">#(text-color:#64A79B)[Examples of Digital Art]
+)</tw-passagedata><tw-passagedata pid="12" name="Examples of Digital Art" tags="" position="400,238" size="100,100">#(text-color:#64A79B)[Examples of Digital Art]
 If you would like more information I have linked the artists below the artwork.
 ---
-&lt;img src = images/&quot;digitalartmuseum.jpeg&quot; /&gt;
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+&lt;img src = &quot;images/digitalartmuseum.jpeg&quot; /&gt;
 
-&lt;img src = images/&quot;yayoi-kusama-art-4-gary-zalatan.jpg&quot; /&gt;
+&lt;img src = &quot;images/yayoi-kusama-art-4-gary-zalatan.jpg&quot; /&gt;
 
-Websites to Browse:
+&#39;&#39;Websites to Browse:&#39;&#39;
 
+&lt;img src = &quot;https://borderless.teamlab.art/images/pc-l/14590&quot; /&gt;
 (link: &quot;Borderless TeamLab Museum&quot;)[(open-url: &quot;https://borderless.teamlab.art/&quot;)]
 (text-style:&quot;superscript&quot;)
 [Copy if button above doesn&#39;t work https://borderless.teamlab.art/]
@@ -484,9 +568,9 @@ Websites to Browse:
 * Note: You should check out (text-style:&quot;underline&quot;)[Collections], they list a wide range of specific types of mediums.
 
 
-&#39;&#39;Response Question: Check out the following links and research images and describe which pieces or mediums spoke the most to you.&#39;&#39;
+&#39;&#39;Response Question: Check out the following links and research images. Describe which pieces or mediums spoke the most to you.&#39;&#39;
 * Challenge: Discuss a particular piece of artwork.
-(input-box:2bind $DigitalArtInterests,&quot;X&quot;,&quot;Type Here and explain What interested you?&quot;)
+(input-box:2bind $DigitalArtInterests,&quot;X&quot;,5, &quot;Double-click and explain What interested you?&quot;)
 
 
 
@@ -549,33 +633,21 @@ Time to make your story pop!
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="15" name="Advanced Macros" tags="" position="1810,429" size="100,100">Otherwise considered as shortcuts, macros are </tw-passagedata><tw-passagedata pid="16" name="What Twine Can Do?" tags="" position="104,812" size="100,100">MIGHT REMOVE LINK
-
-
-#(text-color:#64A79B)[What Twine Can Do?]
----
-Twine allows for a truly interactive story.
-
-Not only are people capable of creating a story, they are capable of coding movement in their ideas without necessarily the knowledge of coding.
-
-[[How is this interactive?-&gt;How is this interactive?]]
-
-(enchant:?link,
-	(background:#7EBDB2) +
-	(border:&#39;solid&#39;) +
-	(color:white) +
-	(corner-radius: 12) +
-	(border-color:#7EBDB2) +
-	(border-size:1) +
-	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
-	
-)</tw-passagedata><tw-passagedata pid="17" name="Digital Art Career Paths" tags="" position="258,234" size="100,100">#(text-color:#64A79B)[Examples of Digital Art]
+)</tw-passagedata><tw-passagedata pid="15" name="Advanced Macros" tags="" position="1810,429" size="100,100">Otherwise considered as shortcuts, macros are </tw-passagedata><tw-passagedata pid="16" name="Digital Art Career Paths" tags="" position="258,234" size="100,100">#(text-color:#64A79B)[Examples of Digital Art]
 &lt;img src = &quot;https://www.designyourway.net/blog/wp-content/uploads/2017/11/115435-636099723929049668-1.jpg&quot; /&gt;
 Some examples of digital art career paths include --
 * Digital Painter (
+* 3D Modeler (
 * Web Designer (
 * Graphic Designer (
 * UI/UX Designer (Designing how people interact with website or games)
+
+
+Here is a website that goes further into depth on the topic of digital art career paths.
+(link: &quot;Digital Art Careers&quot;)[(open-url: &quot;https://theartcareerproject.com/digital-art-careers/&quot;)]
+https://theartcareerproject.com/digital-art-careers/
+
+
 
 
 In this curriculum students will be capable of learning about the production that a designer might do but on a much simpler way.
@@ -592,11 +664,11 @@ In this curriculum students will be capable of learning about the production tha
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="18" name="Color Changing" tags="Maybe-not-add" position="1573,400" size="100,100"># Color Changing
-Want to learn how to further change the colors</tw-passagedata><tw-passagedata pid="19" name="Advanced CSS" tags="" position="1705,353" size="100,100">Do you need a more comprehensive guide to changing your website style?
+)</tw-passagedata><tw-passagedata pid="17" name="Color Changing" tags="Maybe-not-add" position="1573,400" size="100,100"># Color Changing
+Want to learn how to further change the colors</tw-passagedata><tw-passagedata pid="18" name="Advanced CSS" tags="" position="1705,353" size="100,100">Do you need a more comprehensive guide to changing your website style?
 Look no further than CSS
 or rather...
-Cascading Style Sheets</tw-passagedata><tw-passagedata pid="20" name="Inputs" tags="" position="807,687" size="100,100"># Inputs
+Cascading Style Sheets</tw-passagedata><tw-passagedata pid="19" name="Inputs" tags="" position="807,687" size="100,100"># Inputs
 What might be stored within a variable
 ---
 Inputs are important as creators can keep track of what player&#39;s have inputted.
@@ -632,7 +704,7 @@ For each option you are capable of either leaving the input by itself or binding
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="21" name="Variables" tags="" position="799,440" size="100,100"># Variables
+)</tw-passagedata><tw-passagedata pid="20" name="Variables" tags="" position="799,440" size="100,100"># Variables
 ---
 What exactly are variables?
 
@@ -691,7 +763,7 @@ Read if you want more information: Upon using Twine more often, variables will r
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="22" name="Things You Can Add onto Your Twine Creation" tags="" position="1591,782" size="100,100">[[For images...-&gt;Image Editing]]
+)</tw-passagedata><tw-passagedata pid="21" name="Things You Can Add onto Your Twine Creation" tags="" position="1591,782" size="100,100">[[For images...-&gt;Image Editing]]
 
 [[For Videos...-&gt;Video Editing]]
 
@@ -709,18 +781,20 @@ Read if you want more information: Upon using Twine more often, variables will r
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="23" name="Image Editing" tags="" position="1600,933" size="100,100">Images do not have to look as simple as you think in your website. You are also capable of exploring software options for image editing.
+)</tw-passagedata><tw-passagedata pid="22" name="Image Editing" tags="" position="1600,933" size="100,100">Images do not have to look as simple as you think in your website. You are also capable of exploring software options for image editing.
 
-[[Go Back-&gt;Things You Can Add onto Your Twine Creation]]</tw-passagedata><tw-passagedata pid="24" name="Video Editing" tags="" position="1742,856" size="100,100">While not required you can involve videos into your creation.
-[[Go Back-&gt;Things You Can Add onto Your Twine Creation]]</tw-passagedata><tw-passagedata pid="25" name="Interactive Art Introduction" tags="Learning" position="337,382" size="100,100">#(text-color:#64A79B)[What Type of Art are We Looking At?]
+[[Go Back-&gt;Things You Can Add onto Your Twine Creation]]</tw-passagedata><tw-passagedata pid="23" name="Video Editing" tags="" position="1742,856" size="100,100">While not required you can involve videos into your creation.
+[[Go Back-&gt;Things You Can Add onto Your Twine Creation]]</tw-passagedata><tw-passagedata pid="24" name="Interactive Art Introduction" tags="Learning" position="337,382" size="100,100">#(text-color:#64A79B)[What Type of Art are We Looking At?]
 With our journey in digital art we will be venturing in the most basic form of &#39;&#39;Interactive Art&#39;&#39;.
 ---
 Interactive Art is an art form that takes into consideration how the audience will interact with a piece.
 * This can come in the shape of a website, game, or simply an interactive piece, etc.
 
 
-Do not worry if you lack interest in interactive art, this will serve as an introduction to the world of graphic design, game design, coding, etc.
+&#39;&#39;Do not worry if you lack interest in interactive art,&#39;&#39; this will serve as an introduction to the world of graphic design, game design, coding, etc.
 We may even cover subtopics.
+
+(if:$Interactive is true)[* But I guess we do not need to worry since &#39;&#39;you&#39;&#39; already have an interest in interactive art!]
 
 
 [[What software will we be using?-&gt;Twine]]
@@ -740,7 +814,7 @@ We may even cover subtopics.
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
 )
-	</tw-passagedata><tw-passagedata pid="26" name="Opportunities of Digital Art" tags="" position="2093,464" size="100,100">As you can see there are several opportunities that digital art allows for
+	</tw-passagedata><tw-passagedata pid="25" name="Opportunities of Digital Art" tags="" position="2093,464" size="100,100">As you can see there are several opportunities that digital art allows for
 
 
 
@@ -754,7 +828,7 @@ We may even cover subtopics.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="27" name="Challenges and Alternatives to Twine" tags="" position="2094,336" size="100,100">&#39;&#39;...Surely through your exploration of Twine you have encountered difficulty in some way&#39;&#39;
+)</tw-passagedata><tw-passagedata pid="26" name="Challenges and Alternatives to Twine" tags="" position="2094,336" size="100,100">&#39;&#39;...Surely through your exploration of Twine you have encountered difficulty in some way&#39;&#39;
 
 (text-style:&quot;italic&quot;,&quot;underline&quot;)[Challenges and Alternatives to Twine]
 
@@ -793,8 +867,8 @@ In order to make a proper book, one has to make multiple links which gives more 
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="28" name="Basic Knowledge Correlations" tags="" position="566,562" size="100,100">#Do not panic
-Twine is INCREDIBLY similar to other documentation sites
+)</tw-passagedata><tw-passagedata pid="27" name="Basic Knowledge Correlations" tags="" position="566,562" size="100,100">#Do not panic
+Twine is (text-style:&quot;buoy&quot;)[INCREDIBLY] similar to other documentation sites
  - Google Docs
  - Word
  
@@ -805,7 +879,8 @@ Twine is INCREDIBLY similar to other documentation sites
 A simple click on these buttons will get the job done for a simple story and for basic use.
 We will get into extra commands on how to access these as well in later links but for now you can just click on them.
 * The same keyboard shortcuts as google docs and word will not work the same on Twine
-* Twine is moreso similar to HTML except with more accessibility
+* Twine is moreso similar to HTML except with more accessibility to the public
+* Twine does use HTML codes with the use of (&lt;___&gt;)
  
  
 Something a little more advanced but not complicated is Styles which changes how the words look. An example of how they will turn out is in the same text.
@@ -821,7 +896,7 @@ Do not worry if Twine may look complicated, a lot of it&#39;s interface is alrea
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="29" name="Interactive Story Example" tags="" position="373,966" size="100,100"># Here are examples of interactive stories outside of Twinery resources.
+)</tw-passagedata><tw-passagedata pid="28" name="Interactive Story Example" tags="" position="362,837" size="100,100"># Here are examples of interactive stories outside of Twinery resources.
 * Keep in mind, there might be audio...
 (link: &quot;Les Debuts De L Aventure&quot;)[(open-url: &quot;https://noel.heschung.com/en/chapitre/les-debuts-de-l-aventure/&quot;)]
 * A story showcasing the dates of important events within a man&#39;s life.
@@ -846,13 +921,18 @@ How you are selecting buttons and interacting with the site to move is a basic o
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="30" name="The actual code and formatting" tags="" position="619,196" size="100,100">&lt;img src = &gt;
-
-
+)</tw-passagedata><tw-passagedata pid="29" name="The actual code and formatting" tags="" position="619,196" size="100,100">&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+&lt;img src = &quot;images/twinestartingimage1.png&quot;&gt;
 See how when you first open the software you get a blank screen and a singular box.
 That singular box will carry the rest of your project together.
 
-What you will be creating in Twine is a virtual flowchart.
+What you will be creating in Twine is a virtual &#39;&#39;flowchart&#39;&#39;.
+&lt;img src = &quot;images/twinestartinglinks1.png&quot;&gt;
+
 You are free to organize your flowchart in any way you see fit.
 
 To guide you, you are advised to ensure that your flowchart is organized based on how students will engage with your creation.
@@ -867,10 +947,10 @@ To guide you, you are advised to ensure that your flowchart is organized based o
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="31" name="The Looping Process" tags="" position="792,989" size="100,100">The actual decision making...
+)</tw-passagedata><tw-passagedata pid="30" name="The Looping Process" tags="" position="792,989" size="100,100">The actual decision making...
 You&#39;ve got your information down now for how is this going to look all together.
 
-[[Time for an exercise-&gt;Looping Exercise #1]]</tw-passagedata><tw-passagedata pid="32" name="How is this interactive?" tags="" position="234,850" size="100,100">#(text-color:#64A79B)[How is this Interactive?]
+[[Time for an exercise-&gt;Looping Exercise #1]]</tw-passagedata><tw-passagedata pid="31" name="How is this interactive?" tags="" position="234,851" size="100,100">#(text-color:#64A79B)[How is this Interactive?]
 ---
 Not exactly a game sort of deal..
 
@@ -898,7 +978,7 @@ See for example no matter what you type in this input, my code will force a cert
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)[[Let&#39;s check out further examples, outside of Twine.-&gt;Interactive Story Example]]</tw-passagedata><tw-passagedata pid="33" name="Show us what you have made! (Activity)" tags="" position="1043,267" size="100,100">#What have you made?
+)[[Let&#39;s check out further examples, outside of Twine.-&gt;Interactive Story Example]]</tw-passagedata><tw-passagedata pid="32" name="Show us what you have made! (Activity)" tags="" position="1043,267" size="100,100">#What have you made?
 
 Post all your creations using Github.
 [[If you need help-&gt;Publishing]]
@@ -918,7 +998,7 @@ Post all your creations using Github.
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))
 )	
 
-</tw-passagedata><tw-passagedata pid="34" name=" Follow Up of Notecard Exercise" tags="" position="272,674" size="100,100">(text-color:#64A79B)&#39;&#39;What exactly are we doing?&#39;&#39;
+</tw-passagedata><tw-passagedata pid="33" name=" Follow Up of Notecard Exercise" tags="" position="215,654" size="100,100">(text-color:#64A79B)&#39;&#39;What exactly are we doing?&#39;&#39;
 
 Notice how for every notecard you have made a link.
 Now I want you to take those notecards and holepunch the card to tie a piece of yarn between every notecard decision.
@@ -940,7 +1020,7 @@ This is a representation of choices within a webpage
 	(border-color:#7EBDB2) +
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))		
-)</tw-passagedata><tw-passagedata pid="35" name="Introduction of Final Prompt" tags="Learning" position="493,848" size="100,100"># Project for the End of the Curriculum
+)</tw-passagedata><tw-passagedata pid="34" name="Introduction of Final Prompt" tags="Learning" position="562,858" size="100,100"># Project for the End of the Curriculum
 ---
 For the end of the curriculum you will be introducing yourself and giving multiple links of what type of digital art careers you might want to explore.
 * With a digital art career you must list your schedule and your activities throughout the day.
@@ -973,7 +1053,7 @@ If you want to start the final prompt [[Final Prompt-&gt;Final Product]]
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="36" name="Link Exercise (5 questions)" tags="" position="908,16" size="100,100">#Now create your first link.
+)</tw-passagedata><tw-passagedata pid="35" name="Link Exercise (5 questions)" tags="" position="908,16" size="100,100">#Now create your first link.
 ---
 Write a question and answer link.
 
@@ -996,7 +1076,12 @@ You will be creating &#39;&#39;5 questions&#39;&#39;
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
 )
-#Your Text Here</tw-passagedata><tw-passagedata pid="37" name="The Interface of Twine" tags="" position="600,387" size="100,100"># Now getting into Twine
+</tw-passagedata><tw-passagedata pid="36" name="The Interface of Twine" tags="" position="600,388" size="100,100">&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+# Now getting into Twine
 ---
 Most important step,
 to access Twine!
@@ -1006,6 +1091,8 @@ You will be googling Twinery or you can use this link.
 (text-style:&quot;superscript&quot;)
 [Copy if button above doesn&#39;t work twinery.org]
 twinery.org
+&lt;img src = &quot;images/twinestartingpage1.png&quot;/&gt;
+
 
 You can either click on download if you are running on Windows, macOS, or Linux or you can just use on the browser.
 * It runs best through download but do not let this discourage you as the website proves powerful by itself.
@@ -1024,7 +1111,7 @@ Now let&#39;s get into the software.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="38" name="Input Exercise#1" tags="" position="962,691" size="100,100"># Basic Input Exercise
+)</tw-passagedata><tw-passagedata pid="37" name="Input Exercise#1" tags="" position="962,691" size="100,100"># Basic Input Exercise
 
 For this exercise you will be storing a player&#39;s input within a variable. This input will be changed
 
@@ -1053,7 +1140,7 @@ For this exercise you will be storing a player&#39;s input within a variable. Th
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="39" name="Variable Exercise #1" tags="" position="968,430" size="100,100">Create a variable called Player and Health.
+)</tw-passagedata><tw-passagedata pid="38" name="Variable Exercise #1" tags="" position="968,430" size="100,100">Create a variable called Player and Health.
 
 Give Player a Name and give Health a certain value
 * The &quot;Player Name&quot; will be a text string
@@ -1081,8 +1168,15 @@ Give Player a Name and give Health a certain value
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="40" name="Paper Fortune Teller Activity" tags="" position="172,510" size="100,100">#(text-color:#C36D55)[Paper Fortune Teller]
+)</tw-passagedata><tw-passagedata pid="39" name="Paper Fortune Teller Activity" tags="" position="172,492" size="100,100">#(text-color:#C36D55)[Paper Fortune Tellers]
 ---
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
+[&lt;img src=&#39;https://static.onecms.io/wp-content/uploads/sites/34/2021/07/28/fortune-teller-primary-0721-2000.jpg&#39;&gt;]&lt;hook-name|
+(click: ?hook-name)[(open-url: &quot;https://www.marthastewart.com/8138441/paper-fortune-teller-how-to&quot;)]
 &#39;&#39;Remember this by any chance?&#39;&#39;
 * This will serve as an introduction to this activity.
 
@@ -1106,7 +1200,7 @@ Type your discussed answer below.
 
 [[Understanding what you just made-&gt;Making Decisions]]
 
-(enchant:?link,
+(enchant: &quot;Understanding what you just made&quot;,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
 	(color:white) +
@@ -1120,7 +1214,7 @@ Type your discussed answer below.
      (text-color:black)+
      (background:#C1D2E7)+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="41" name="Teacher Notes" tags="" position="445,0" size="100,100">#(text-color:#64A79B)[Teacher Notes]
+)</tw-passagedata><tw-passagedata pid="40" name="Teacher Notes" tags="" position="381,3" size="100,100">#(text-color:#64A79B)[Teacher Notes]
 ---
 Before introducing this to your students provide a brief summary that your students will be learning basic interaction skills on a website and will explore the medium of digital art through a singular aspect.
 
@@ -1144,10 +1238,10 @@ Towards the end of the curriculum it will show students progress and what they h
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="42" name="Citations" tags="" position="2100,1006" size="100,100">&#39;&#39;Citations&#39;&#39;
+)</tw-passagedata><tw-passagedata pid="41" name="Citations" tags="" position="2100,1006" size="100,100">&#39;&#39;Citations&#39;&#39;
 
 
-</tw-passagedata><tw-passagedata pid="43" name="Getting Started" tags="" position="568,697" size="100,100">#What knowledge do you need?
+</tw-passagedata><tw-passagedata pid="42" name="Getting Started" tags="" position="568,697" size="100,100">#What knowledge do you need?
 
 Not much, everything you need to know about the basics of twine will be involved here.
 Basic computer literacy like typing on keyboard or going through a website would be appreciated.
@@ -1166,7 +1260,7 @@ Do not worry too much about the fact that Twine does entail some coding
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="44" name="Story Formats" tags="" position="1840,540" size="100,100"></tw-passagedata><tw-passagedata pid="45" name="Looping Exercise #1" tags="" position="937,989" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="Getting Your Twine Creation Started" tags="" position="1400,372" size="100,100">
+)</tw-passagedata><tw-passagedata pid="43" name="Story Formats" tags="" position="1840,540" size="100,100"></tw-passagedata><tw-passagedata pid="44" name="Looping Exercise #1" tags="" position="937,989" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="45" name="Getting Your Twine Creation Started" tags="" position="1400,372" size="100,100">
 #Getting Started with Twine (typically used in Twine)
 ---
 &#39;&#39;Basics&#39;&#39;
@@ -1195,20 +1289,21 @@ Do not worry too much about the fact that Twine does entail some coding
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="47" name="Hooks" tags="" position="807,1097" size="100,100">Hooks can be used anywhere within your code. It is not constrained to one box.
+)</tw-passagedata><tw-passagedata pid="46" name="Hooks" tags="" position="807,1097" size="100,100">Hooks can be used anywhere within your code. It is not constrained to one box.
 
-[[Now for practice-&gt;Hook Exercise #1]]</tw-passagedata><tw-passagedata pid="48" name="If... Statements" tags="" position="805,572" size="100,100"># If Statements
+[[Now for practice-&gt;Hook Exercise #1]]</tw-passagedata><tw-passagedata pid="47" name="If... Statements" tags="" position="805,571" size="100,100"># If Statements
 Changing values
 ---
 As we learned from earlier this will tie hand in hand with variables.
 
 	Imagine this..
 		You are at the mall purchasing items.
-		
+(set: _hotdogthen to &quot;You have a full stomach but you lost 20 dollars&quot;)
 		You have $50 to spend
 		Here are your options:
 		*(checkbox: 2bind $hotdog,&quot;You buy a hotdog&quot;)
-		*(if:$hotdog is 1)(print:[You have a full stomach but you lost 20 dollars]) 
+		*(if:$hotdog is true)[Your Text Here]
+		(if:$hotdog is true)[You have a full stomach but you lost 20 dollars ] 
 		if you buy the hot dog... &#39;&#39;then&#39;&#39; you get a full stomach but you lost 20 dollars
 		* if you skip the food court... &#39;&#39;then&#39;&#39; you get the options of	-- buying clothes but you have no food and 10 bucks
 		* if you choose to window shop... &#39;&#39;then&#39;&#39; you can save up your money for college
@@ -1256,7 +1351,8 @@ There are also exists &quot;else-if&quot; and &quot;unless&quot;
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="49" name="Basic Design" tags="" position="1415,677" size="100,100">#(text-color:#64A79B)More than just the Basic Design
+)
+</tw-passagedata><tw-passagedata pid="48" name="Basic Design" tags="" position="1415,677" size="100,100">#(text-color:#64A79B)More than just the Basic Design
 ---
 While this is a Twine &#39;&#39;basics&#39;&#39; tutorial, this is not everything that Twine has to offer.
 
@@ -1273,10 +1369,7 @@ Twine still continues to have a variety of codes and interactive methods to acce
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="50" name="Table of Contents" tags="" position="29,113" size="100,100">=&gt;&lt;=
-#Table of Contents
----
-
+)</tw-passagedata><tw-passagedata pid="49" name="Table of Contents" tags="" position="29,114" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[#Table of Contents]
 1. [[Digital Art Curriculum Beginning-&gt;Digital Art Curriculum]]
 
 2. [[Digital Art Definition-&gt;Digital Art Definition and Why is it used?]]
@@ -1317,7 +1410,12 @@ Twine still continues to have a variety of codes and interactive methods to acce
 (enchant:?page,
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
-     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="51" name="Hook Exercise #1" tags="" position="929,1093" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="52" name="Macros" tags="" position="806,1212" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="53" name="COLOR CHANGES" tags="" position="1123,1062" size="100,100"></tw-passagedata><tw-passagedata pid="54" name="Adding Embedded Items" tags="" position="1729,634" size="100,100"># Embedding Items</tw-passagedata><tw-passagedata pid="55" name="Images" tags="Twine" position="814,137" size="100,100">#Images
+     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="50" name="Hook Exercise #1" tags="" position="929,1093" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="51" name="Macros" tags="" position="806,1212" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="52" name="COLOR CHANGES" tags="" position="1123,1062" size="100,100"></tw-passagedata><tw-passagedata pid="53" name="Adding Embedded Items" tags="" position="1729,634" size="100,100"># Embedding Items</tw-passagedata><tw-passagedata pid="54" name="Images" tags="Twine" position="814,136" size="100,100">#Images
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
 ---
 Now to add images to your Twine project.
 This is what will kick off your creation.
@@ -1354,9 +1452,17 @@ However, if you want to make sure that files do not get messed up you can organi
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="56" name="Image Exercise (Notecards Continued)" tags="" position="1094,138" size="100,100">(text-color:#64A79B)[&#39;&#39;Remember those notecards that you made earlier?&#39;&#39;]
-
+)</tw-passagedata><tw-passagedata pid="55" name="Image Exercise (Notecards Continued)" tags="" position="1094,138" size="100,100">(text-color:#64A79B)[&#39;&#39;Remember those notecards that you made earlier?&#39;&#39;]
+&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
 Draw on every single one of those notecards and recreate those notecards as links.
+The drawing process of each of the notecards will look similar to a &#39;&#39;story board&#39;&#39; for animation.
+* You are to draw a scene that helps define the event in the scene.
+&lt;img src = &quot;images/animationstoryboard1.jpg&quot;&gt;
+
 
 You will then scan your notecards with pictures on them and input them into the links.
 
@@ -1397,7 +1503,7 @@ When you have finally finished adding your images notice how when you press play
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="57" name="Advice" tags="" position="1944,289" size="100,100">#Here is some advice
+)</tw-passagedata><tw-passagedata pid="56" name="Advice" tags="" position="1944,289" size="100,100">#Here is some advice
 &#39;&#39;Making a good looking website and how to organize your workflow&#39;&#39;
 
 
@@ -1411,7 +1517,7 @@ When you have finally finished adding your images notice how when you press play
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="58" name="Certificate" tags="" position="2095,744" size="100,100">Congratulations 
+)</tw-passagedata><tw-passagedata pid="57" name="Certificate" tags="" position="2095,744" size="100,100">Congratulations 
 (if:$Name is 0)[Did you forget to type your name?]
 (else:)(print: $Name) !!!
 
@@ -1432,7 +1538,7 @@ Here is your certificate---
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="59" name="What have you learned as a result?" tags="" position="2096,606" size="100,100">#What did you learn in this curriculum?
+)</tw-passagedata><tw-passagedata pid="58" name="What have you learned as a result?" tags="" position="2096,606" size="100,100">#What did you learn in this curriculum?
 
 (input-box:2bind $userlearned,&quot;=XX=&quot;,&quot;What have you learned so far?&quot;)
 
@@ -1449,7 +1555,7 @@ Here is your certificate---
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="60" name="Final Product" tags="" position="1915,136" size="100,100">Now you will be creating your final product...
+)</tw-passagedata><tw-passagedata pid="59" name="Final Product" tags="" position="1915,136" size="100,100">Now you will be creating your final product...
 
 In case you want to review the curriculum.
 
@@ -1467,7 +1573,7 @@ In case you want to review the curriculum.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="61" name="Introduction + Learning Objectives" tags="" position="392,118" size="100,100">(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
+)</tw-passagedata><tw-passagedata pid="60" name="Introduction + Learning Objectives" tags="" position="393,117" size="100,100">(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
 #(text-color:#64A79B)[Introduction] 
 ---
 In this curriculum we will be learning about digital art and its possibilities. We will encounter a type of digital art and an example of it through a specific software.
@@ -1493,8 +1599,8 @@ This will be graded on if students have interacted with all of the inputs.
 * Basic computer literacy of interacting through websites
 * Basic Knowledge of how to download programs
 	
-&#39;&#39;Type your name below to acknowledge this (First Name, Last Name)--
-&#39;&#39;(input-box:2bind $Name,&quot;=XX=&quot;,&quot;Double click the text to edit.&quot;)
+&#39;&#39;Type your name below to acknowledge this (First Name Last Name)--
+&#39;&#39;(input-box:2bind $Name,&quot;=XX=&quot;,&quot;Double-click the text to sign your name.&quot;)
 
 
 [[Now let&#39;s test your knowledge-&gt;What exactly is digital art? (exercise)]]
@@ -1508,11 +1614,12 @@ This will be graded on if students have interacted with all of the inputs.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="62" name="Pop Quiz!!" tags="" position="1142,824" size="100,100">#Pop Quiz!!!
+)
+</tw-passagedata><tw-passagedata pid="61" name="Pop Quiz!!" tags="" position="1142,824" size="100,100">#Pop Quiz!!!
 ---
 Try your best not to go back.
 
-(checkbox: 2bind $Correct,&quot;Answer&quot;)</tw-passagedata><tw-passagedata pid="63" name="Hyperlinking" tags="" position="1044,13" size="100,100">#Hyperlinking
+(checkbox: 2bind $Correct,&quot;Answer&quot;)</tw-passagedata><tw-passagedata pid="62" name="Hyperlinking" tags="" position="1044,13" size="100,100">#Hyperlinking
 ---
 Say you want to go to a passage but you want to go back to where you were before, hyperlinks are your answer.
 
@@ -1532,10 +1639,10 @@ You can easily send a link back and make the arrow point two directions.
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="64" name="Input + Linking Exercise" tags="" position="1086,686" size="100,100">Now that you have learned about doing inputs. 
+)</tw-passagedata><tw-passagedata pid="63" name="Input + Linking Exercise" tags="" position="1086,686" size="100,100">Now that you have learned about doing inputs. 
 Do you remember the 5 questions that we had done before?
 	
-	You will be </tw-passagedata><tw-passagedata pid="65" name="Hyperlinking Exercise (5 MC Questions)" tags="" position="1182,17" size="100,100">We will be doing something similar as to what we had done before.
+	You will be </tw-passagedata><tw-passagedata pid="64" name="Hyperlinking Exercise (5 MC Questions)" tags="" position="1182,17" size="100,100">We will be doing something similar as to what we had done before.
 
 
 
@@ -1549,7 +1656,7 @@ Do you remember the 5 questions that we had done before?
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="66" name="Linking Reflection" tags="" position="1461,114" size="100,100">Time to reflect.
+)</tw-passagedata><tw-passagedata pid="65" name="Linking Reflection" tags="" position="1461,114" size="100,100">Time to reflect.
 
 Explain your steps for the past two exercises.
 (input-box:&quot;=XX=&quot;)
@@ -1565,14 +1672,13 @@ Explain your steps for the past two exercises.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="67" name="VARIABLES WITHIN TWINE" tags="" position="1120,942" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="68" name="Which Types of Digital Art are you Interested in?" tags="" position="490,411" size="100,100">The full list of types of digital art is provided by: 
-(link: &quot;https://www.heavym.net/types-of-digital-art-and-how-you-can-easily-master-one/
-&quot;)[(open-url: &quot;https://www.heavym.net/types-of-digital-art-and-how-you-can-easily-master-one/
+)</tw-passagedata><tw-passagedata pid="66" name="VARIABLES WITHIN TWINE" tags="" position="1120,942" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="67" name="Which Types of Digital Art are you Interested in?" tags="" position="490,411" size="100,100">&#39;&#39;The full list of types of digital art is provided by: &#39;&#39;
+(link: &quot;Types of Digital Art and How You Can Easily Master One&quot;)[(open-url: &quot;https://www.heavym.net/types-of-digital-art-and-how-you-can-easily-master-one/
 &quot;)]
 https://www.heavym.net/types-of-digital-art-and-how-you-can-easily-master-one/
 
 https://okuha.com/digital-art-styles-and-types/
-(link: &quot;https://okuha.com/digital-art-styles-and-types/&quot;)[(open-url: &quot;https://okuha.com/digital-art-styles-and-types/&quot;)]
+(link: &quot;Digital Art Styles and Types&quot;)[(open-url: &quot;https://okuha.com/digital-art-styles-and-types/&quot;)]
 
 (text-color:#64A79B)[&#39;&#39;What types of Digital Art might you be interested in?&#39;&#39;]
 * Could just be based off of name.
@@ -1614,7 +1720,7 @@ Checkmark below.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="69" name="Very Basic Changing the Look" tags="" position="810,814" size="100,100"># Changing the Look
+)</tw-passagedata><tw-passagedata pid="68" name="Very Basic Changing the Look" tags="" position="810,814" size="100,100"># Changing the Look
 ---
 
 Notice how in your basic links when you press &#39;&#39;Play&#39;&#39; all you get is a dark background with white text and blue for the links, 
@@ -1659,7 +1765,7 @@ Here is an easy code to change the color of a particular piece of text.
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="70" name="CONDITIONALS" tags="" position="1119,1177" size="100,100"></tw-passagedata><tw-passagedata pid="71" name="Small Image Activity" tags="" position="1209,152" size="100,100">Googling activity
+)</tw-passagedata><tw-passagedata pid="69" name="CONDITIONALS" tags="" position="1119,1177" size="100,100"></tw-passagedata><tw-passagedata pid="70" name="Small Image Activity" tags="" position="1209,152" size="100,100">Googling activity
 You will make a pinterest board of your own vibes
 
 (enchant:?link,
@@ -1671,7 +1777,7 @@ You will make a pinterest board of your own vibes
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="72" name="If Statements Exercise #1" tags="" position="970,575" size="100,100"># If... Statement Activity
+)</tw-passagedata><tw-passagedata pid="71" name="If Statements Exercise #1" tags="" position="970,575" size="100,100"># If... Statement Activity
 &#39;&#39;Create an interactive maze where audiences have to escape.&#39;&#39;
 
 &#39;&#39;You can shape your maze by the following:&#39;&#39;
@@ -1714,7 +1820,7 @@ If they go to a certain passage
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="73" name="If Statements Interactive Activity" tags="" position="1140,558" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="74" name="Color Changing Exercise #1" tags="" position="967,833" size="100,100">#Let&#39;s Choose a Color Palette
+)</tw-passagedata><tw-passagedata pid="72" name="If Statements Interactive Activity" tags="" position="1140,558" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="73" name="Color Changing Exercise #1" tags="" position="967,833" size="100,100">#Let&#39;s Choose a Color Palette
 ---
 
 Do some research online about types of color palettes.
@@ -1750,7 +1856,7 @@ You will recolor the following:
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="75" name="Conclusion of Getting Started" tags="" position="1251,719" size="100,100">#Congratulations You Have Finished the Twine Basics!
+)</tw-passagedata><tw-passagedata pid="74" name="Conclusion of Getting Started" tags="" position="1251,719" size="100,100">#Congratulations You Have Finished the Twine Basics!
 
 
 Still stuck on how to get your Twine Creation Started?
@@ -1769,7 +1875,7 @@ If you have finished learning - [[Continue-&gt;Basic Design]]
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="76" name="Start to Basic Twine Coding" tags="" position="754,315" size="100,100"># Time for Basic Coding
+)</tw-passagedata><tw-passagedata pid="75" name="Start to Basic Twine Coding" tags="" position="754,315" size="100,100"># Time for Basic Coding
 ---
 Now that we have been able to learn how to officially make Twine works. Let us move onto very basic coding.
 
@@ -1798,7 +1904,7 @@ Let&#39;s see what Twine can do...
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="77" name="Short Show and Tell Activity" tags="" position="1232,311" size="100,100">Let&#39;s not forget the most important part.
+)</tw-passagedata><tw-passagedata pid="76" name="Short Show and Tell Activity" tags="" position="1232,311" size="100,100">Let&#39;s not forget the most important part.
 With sharing your stories comes development and fixes.
 
 &#39;&#39;Share with a peer your website and discuss what to improve on and what was challenging.&#39;&#39;
@@ -1831,7 +1937,11 @@ If you have finished:
 	(border-color:#7EBDB2) +
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))
-)	</tw-passagedata><tw-passagedata pid="78" name="Organizing Files + Images" tags="" position="959,134" size="100,100">
+)	</tw-passagedata><tw-passagedata pid="77" name="Organizing Files + Images" tags="" position="960,133" size="100,100">&lt;style&gt; img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
 Go directly to your computer&#39;s files and locate your Twine files.
 Go to the project you want to add files onto and create an overall folder for the project.
 Create a folder for your images next to your Twine file.
@@ -1868,7 +1978,7 @@ You will need to download these and rename them with all lowercase and no specia
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="79" name="Credits" tags="" position="2100,871" size="100,100">Non-Credited Art by Charlize Serrano
+)</tw-passagedata><tw-passagedata pid="78" name="Credits" tags="" position="2100,871" size="100,100">Non-Credited Art by Charlize Serrano
 Programming by Charlize Serrano
 
 Special Thanks to James Morgan and Susan Trimingham
@@ -1892,7 +2002,7 @@ I am currently a high school senior aiming to get a degree in Computer Programmi
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="80" name="How This was Made" tags="" position="2240,870" size="100,100">#How the website was made?
+)</tw-passagedata><tw-passagedata pid="79" name="How This was Made" tags="" position="2240,870" size="100,100">#How the website was made?
 ---
 Through creating this website I had overcome several challenges.
 Organization was a huge factor in Twine.
@@ -1911,7 +2021,7 @@ Organization was a huge factor in Twine.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="81" name="Final Reflection" tags="" position="2087,204" size="100,100">#Final Reflection
+)</tw-passagedata><tw-passagedata pid="80" name="Final Reflection" tags="" position="2087,204" size="100,100">#Final Reflection
 ---
 We are finally reaching the end--but first let&#39;s review.
 Write down your feelings about the entire curriculum.
@@ -1931,7 +2041,7 @@ Write down your feelings about the entire curriculum.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="82" name="Free Digital Art Sources" tags="" position="2243,498" size="100,100">[[What have you learned as a result?-&gt;What have you learned as a result?]]
+)</tw-passagedata><tw-passagedata pid="81" name="Free Digital Art Sources" tags="" position="2243,498" size="100,100">[[What have you learned as a result?-&gt;What have you learned as a result?]]
 (enchant:?link,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
@@ -1941,7 +2051,7 @@ Write down your feelings about the entire curriculum.
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="83" name="Curriculum Review" tags="" position="2299,322" size="100,100">#Curriculum Review
+)</tw-passagedata><tw-passagedata pid="82" name="Curriculum Review" tags="" position="2299,322" size="100,100">#Curriculum Review
 How has your thinking changed over the course?
 ---
 Here are all of your selections and inputs through the past curriculum.
