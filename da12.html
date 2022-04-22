@@ -53,20 +53,22 @@ input, textarea {
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Digital Art Curriculum" tags="Learning" position="170,7" size="100,100">&lt;span id=&quot;box&quot;&gt;  
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Digital Art Curriculum" tags="Learning" position="174,6" size="100,100">&lt;span id=&quot;box&quot;&gt;  
 (font: &quot;Tahoma&quot;)+(text-color:#64A79B)+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Date: (current-date:)]&lt;/span&gt;
  (align: &quot;&lt;==&quot;)[[[Teacher Notes-&gt;Teacher Notes]] [[Table of Contents-&gt;Table of Contents]]]
 
 
-#(text-color:#64A79B)+(text-style: &quot;underline&quot;)[Digital Art Curriculum]&lt;curriculum|      [&lt;img src=&#39;images/penguinavatartest1.gif&#39;&gt;]&lt;penguin|
-&lt;span id=&quot;box&quot;&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-size:0.8)+(text-style:&quot;buoy&quot;)+(click: ?penguin)+(t8n:&quot;dissolve&quot;)[Hello I am Clyx, click on me to get advice. 
-(t8n:&quot;dissolve&quot;)[Please scroll down for more content.]]&lt;/span&gt;
-(click: ?curriculum)+(t8n:&quot;dissolve&quot;)[Zoom out or zoom in to make the penguin go to the right of the title. (Press Ctrl+ or Ctrl-)]
-
+#(text-color:#64A79B)+(text-style: &quot;underline&quot;)[Digital Art Curriculum]&lt;curriculum|      
+\[&lt;img src=&#39;images/penguinavatartest1.gif&#39;&gt;]&lt;penguin|
+&lt;span id=&quot;box&quot;&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)+(text-size:0.8)+(text-style:&quot;buoy&quot;)+(click: ?penguin)+(t8n:&quot;dissolve&quot;)[Please scroll down for more content.]&lt;/span&gt; 
 An &#39;&#39;interactive website&#39;&#39; to teach young adolescents about a form of digital art, interactive art.	
 
 A curriculum lesson plan made by |1&gt;[Charlize Serrano] (click:?1)[a High School Senior]
 ---
+(click: ?curriculum)+(t8n:&quot;dissolve&quot;)[Congrats on clicking the secret button, you will be making a Twine project.]
+Zoom out or zoom in to make the penguin go to the right of the title. (Press Ctrl+ or Ctrl-)
+&#39;&#39;Click on the penguin for advice.&#39;&#39;
+
 &lt;style&gt; img {
 	max-width:100%;
 	max-height:100%;
@@ -197,6 +199,8 @@ Let&#39;s start with what you know already.
 	(hover-style: (bg:#9EB6D6) + (border-color:#9EB6D6)))</tw-passagedata><tw-passagedata pid="3" name="Twine" tags="Twine" position="202,366" size="100,100">Now with your personal journey of digital art you will be learning interactive art through...
 
 #(text-color:#64A79B)+(t8n:&quot;slide-right&quot;)+(t8n-delay:0.5s)[Twine]
+(text-color:#64A79B)+(t8n:&quot;dissolve&quot;)+(t8n-delay:0.9s)[&#39;&#39;A basic coding software primarily used for storytelling&#39;&#39;]
+
 Without needing the requirement of drawing, one&#39;s creativity is capable of shining through the software that is Twine.
 * You will be using this software to specifially make story codes
 * You may include art but that is not required
@@ -568,7 +572,7 @@ Realistically digital art can be used for anything. It is simply an expression o
 	(border-color:white)
 )
 
-</tw-passagedata><tw-passagedata pid="10" name="Links: Most basic and most used button." tags="Twine" position="766,45" size="100,100">#(text-color:#64A79B)[Links]
+</tw-passagedata><tw-passagedata pid="10" name="Links: Most basic and most used button." tags="Twine" position="750,27" size="100,100">#(text-color:#64A79B)[Links]
 &lt;style&gt; img {
 	max-width:100%;
 	max-height:100%;
@@ -604,6 +608,13 @@ Write the link below where if a user presses &quot;Home&quot; they go to the Mai
 
 2. (input-box:2bind $link2,&quot;=X=&quot;,1,&quot;&quot;)
 
+[Submit]&lt;submit|
+
+(click: ?submit)+(t8n:&quot;dissolve&quot;)+(t8n-delay:0.3s)[(if: $link1 is &quot;Home&quot;)[You got the 1 correct](else-if: $link1 is not &quot;Home&quot;)[You got 1 wrong]
+\(if: $link2 is &quot;Menu&quot;)[ and you got 2 correct.](else-if: $link2 is not &quot;Menu&quot;)[ and you got 2 wrong.]
+\ If you got a wrong answer refresh the page to correct your answer.]
+
+
 [[Now let&#39;s try it.-&gt;Link Exercise (5 questions)]]
 
 
@@ -622,7 +633,7 @@ Write the link below where if a user presses &quot;Home&quot; they go to the Mai
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="11" name="Publishing" tags="Twine" position="782,268" size="100,100">#(text-color:#64A79B)[Publishing]
+)</tw-passagedata><tw-passagedata pid="11" name="Publishing" tags="Twine" position="760,261" size="100,100">#(text-color:#64A79B)[Publishing]
 ---
 Now that you have a functional website,
 	you can already publish your website onto a domain to share your work.
@@ -686,7 +697,7 @@ To play the file you will have to go onto the broswer version of Github and copy
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="12" name="Examples of Digital Art" tags="" position="408,244" size="100,100">#(text-color:#64A79B)[Examples of Digital Art]
+)</tw-passagedata><tw-passagedata pid="12" name="Examples of Digital Art" tags="" position="408,242" size="100,100">#(text-color:#64A79B)[Examples of Digital Art]
 If you would like more information I have linked the artists below the artwork.
 ---
 &lt;style&gt; img {
@@ -837,7 +848,7 @@ Time to make your story pop!
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="14" name="Extra Resources" tags="" position="2331,621" size="100,100">For extra research on specific items here are some example of tutorials.
+)</tw-passagedata><tw-passagedata pid="14" name="Specific Resources" tags="" position="2331,621" size="100,100">For extra research on specific items here are some example of tutorials.
 (enchant:?link,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
@@ -847,7 +858,9 @@ Time to make your story pop!
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="15" name="Advanced Macros" tags="" position="1700,373" size="100,100">Otherwise considered as shortcuts, macros help write variable changing code.
+)
+
+(link: &quot;Creative Solutions with Twine Presentation&quot;)[(open-url: &quot;https://www.christytuckerlearning.com/creative-solutions-with-twine-presentation/&quot;)]</tw-passagedata><tw-passagedata pid="15" name="Advanced Macros" tags="" position="1700,373" size="100,100">Otherwise considered as shortcuts, macros help write variable changing code.
 &#39;&#39;Remember:&#39;&#39; You already used Macros previously.
 &lt;img src = &quot;images/colorenchant.png&quot; /&gt;
 
@@ -1014,7 +1027,7 @@ For each option you are capable of either leaving the input by itself or binding
      (text-color:black)+
      (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
      (font:&quot;Open Sans&quot;)
-)</tw-passagedata><tw-passagedata pid="19" name="Variables" tags="" position="799,489" size="100,100">#(text-color:#64A79B)[Variables]
+)</tw-passagedata><tw-passagedata pid="19" name="Variables" tags="" position="772,487" size="100,100">#(text-color:#64A79B)[Variables]
 ---
 What exactly are variables?
 
@@ -1123,6 +1136,8 @@ You can utilize free items
 * Pixel Editors to create small game images
 * Etc.
 
+
+
 [[Go Back-&gt;Things You Can Add onto Your Twine Creation]]
 (enchant:?link,
 	(background:#7EBDB2) +
@@ -1184,6 +1199,7 @@ With our journey in digital art we will be venturing in the most basic form of &
 (t8n-delay:0.5s) +(t8n:&quot;dissolve&quot;)[&#39;&#39;Interactive Art&#39;&#39; is an art form that takes into consideration how the audience will interact with a piece.
 * This can come in the shape of a website, game, or simply an interactive piece, etc.]&lt;interactive|
 
+=|=
 &lt;img src =&quot;images/interactiveart.gif&quot; /&gt;
 
 
@@ -1192,7 +1208,7 @@ We may even cover subtopics.
 
 (if:$Interactive is true)|1&gt;[But I guess we do not need to worry since &#39;&#39;you&#39;&#39; already have an interest in interactive art!]
 (mouseover:?1)+(text-style:&quot;superscript&quot;)+(align:&quot;&lt;==&quot;)+(box:&quot;=XXXXX====&quot;)[You selected &quot;Interactive Art&quot;.(if: $Name is not 0)[ Good luck $Name!]]
-
+|==|
 
 [[What software will we be using?-&gt;Twine]]
 
@@ -1217,7 +1233,7 @@ We may even cover subtopics.
 	(border:&#39;solid&#39;) +
 	(corner-radius: 12) +
 	(border-color:#ffffff) +
-	(border-size:3))</tw-passagedata><tw-passagedata pid="24" name="Opportunities of Digital Art" tags="" position="2093,464" size="100,100">#Opportunities of Digital Art
+	(border-size:3))</tw-passagedata><tw-passagedata pid="24" name="Opportunities of Digital Art" tags="" position="2093,463" size="100,100">#Opportunities of Digital Art
 As you can see there are several opportunities that digital art allows.
 
 Digital art overall enhances the experience that audiences may have with art. 
@@ -1445,7 +1461,7 @@ See for example no matter what you type in this input, my code will force a cert
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)[[Let&#39;s check out further examples, outside of Twine.-&gt;Interactive Story Example]]</tw-passagedata><tw-passagedata pid="31" name="Show us what you have made! (Activity)" tags="" position="980,272" size="100,100">#(text-color:#64A79B)[What have you made?]
+)[[Let&#39;s check out further examples, outside of Twine.-&gt;Interactive Story Example]]</tw-passagedata><tw-passagedata pid="31" name="Show us what you have made! (Activity)" tags="" position="967,283" size="100,100">#(text-color:#64A79B)[What have you made?]
 
 Post all your creations using Github.
 [[If you need help-&gt;Publishing]]
@@ -1459,9 +1475,19 @@ Post all your creations using Github.
 
 * &#39;&#39;What is the name of this creation&#39;&#39;
 (input-box:2bind $nameWebsite,&quot;X&quot;,2,&quot;Double-Click to share the name&quot;)
+[Submit]&lt;submit|
+(click: ?submit)[
+The following links are your creations:
+(if: $Creation is not 0)[(link: &quot;GitHub&quot;)[(open-url: $Creation)]
+(if: $Creation is &quot;Double-Click to Insert URL&quot;)[Please submit your Github(if: $Name is not 0)[, $Name].]
+(if: $nameWebsite is 0)[(set: $nameWebsite to &quot;Unnamed Creation&quot;)](if: $specificCreation is not 0)[(link: $nameWebsite)[(open-url: $specificCreation)]
+\(if: $specificCreation is &quot;Double-Click to Insert URL&quot;)[Did you not want to share your website, (if: $Name is not 0)[, $Name]. ]]]]
 
 
-[[Continue-&gt;Short Show and Tell Activity]]
+&lt;span id=&quot;box&quot;&gt;  
+(align:&quot;==&gt;&quot;)[(box:&quot;X&quot;)[[Let&#39;s Continue-&gt;Short Show and Tell Activity]]]
+&lt;/span&gt;
+
 (enchant:?link,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
@@ -1697,11 +1723,21 @@ If they select a certain choice like a checkmark then something will happen.
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="37" name="Variable Exercise #1" tags="" position="968,430" size="100,100">Create a variable called Player and Health.
+)</tw-passagedata><tw-passagedata pid="37" name="Variable Exercise #1" tags="" position="968,430" size="100,100">Let&#39;s make sentences using variables.
 
-Give Player a Name and give Health a certain value
-* The &quot;Player Name&quot; will be a text string
-* The &quot;Health&quot; will be a Number Value
+You will be storing a sentence within a variable and display that sentence in another passage.
+
+First practice here.
+
+Name your variable
+(input-box:2bind $variablename,&quot;=XX=&quot;,1,&quot;Double-click to change the name of your variable&quot;)
+
+Type a sentence down below (text string)
+(input-box:2bind $sentence,&quot;X&quot;,&quot;Double-click to type your sentence&quot;)
+
+(if: $variablename is not 0)[(print:$variablename [(if: $sentence is not 0)[is $sentence]])]
+
+
 
 [[We will continue using these variables in the next lesson-&gt;If... Statements]]
 
@@ -1948,6 +1984,15 @@ If
 ...you skip the food court &#39;&#39;then&#39;&#39; (click: &quot;you skip the food court&quot;)[(t8n:&quot;dissolve&quot;)[you get the option of buying clothes but you have no food and 10 bucks] ]
 ...you choose to window shop &#39;&#39;then&#39;&#39; (click: &quot;you choose to window shop&quot;)[(t8n:&quot;dissolve&quot;)[you can save up your money for college]]
 		
+[test]&lt;test|
+(click: ?test)[(dialog: bind $hotdog, &quot;Imagine your at the mall. Do you...&quot;, &quot;buy the hot dog&quot;, &quot;skip the food court&quot;, &quot;choose to window shop&quot;)
+]
+(if: $hotdog is &quot;buy the hot dog&quot;)[you now have a full stomach]
+(if: $hotdog is &quot;skip the food court&quot;)[you can buy clothes but you have no food and 10 bucks]
+(if: $hotdog is &quot;choose to window shop&quot;)[you can save up your money for college]
+
+
+
 In general the option you pick decides your future actions 		
 &#39;&#39;If...statements work similarly to this thought process.&#39;&#39;
 * If a player chooses to do something their path and variables around them will be affected.
@@ -2052,18 +2097,24 @@ The actual code and formatting
 5. [[Twine Basics-&gt;Twine Basics + Basic Coding]]
 |5&gt;[Chapters]
 (mouseover:?5)[]
-5. [[Getting Your Twine Creation Started-&gt;Getting Your Twine Creation Started]]
-|5&gt;[Chapters]
-6. [[Extra Learning-&gt;Extra Learning]]
+6. [[Getting Your Twine Creation Started-&gt;Getting Your Twine Creation Started]]
 |6&gt;[Chapters]
-7. [[Things You Can Add onto Your Twine Creation-&gt;Things You Can Add onto Your Twine Creation]]
+(mouseover:?6)[]
+7. [[Extra Learning-&gt;Extra Learning]]
 |7&gt;[Chapters]
-8. [[Advice-&gt;Advice]] 
+(mouseover:?7)[]
+8. [[Things You Can Add onto Your Twine Creation-&gt;Things You Can Add onto Your Twine Creation]]
 |8&gt;[Chapters]
-9. [[Final Product-&gt;Final Product]]
+(mouseover:?8)[]
+9. [[Advice-&gt;Advice]] 
 |9&gt;[Chapters]
-10. [[Citations-&gt;Citations]]
+(mouseover:?9)[]
+10. [[Final Product-&gt;Final Product]]
 |10&gt;[Chapters]
+(mouseover:?10)[]
+11. [[Citations-&gt;Citations]]
+|11&gt;[Chapters]
+(mouseover:?11)[]
 
 
 (enchant: &quot;Table of Contents&quot;,
@@ -2105,7 +2156,7 @@ The actual code and formatting
 	(border-size:1) +
 	(hover-style: (bg:#64A79B) + (border-color:#64A79B))	
 	
-)</tw-passagedata><tw-passagedata pid="53" name="Images" tags="Twine" position="775,154" size="100,100">#(text-color:#64A79B)[Images]
+)</tw-passagedata><tw-passagedata pid="53" name="Images" tags="Twine" position="771,153" size="100,100">#(text-color:#64A79B)[Images]
 &lt;style&gt; img {
 	max-width:100%;
 	max-height:100%;
@@ -2251,7 +2302,9 @@ In fact, you should start on creating your website before you even touch Twine.
 (enchant:?page,
      (text-color:black)+
      (background:white)+
-     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="56" name="Certificate" tags="" position="2096,745" size="100,100">#Congratulations 
+     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="56" name="Certificate" tags="" position="2096,745" size="100,100">(if: $Name is 0)[(set: $Name to (prompt: &quot;You forgot your name. Name, please:&quot;, &quot;Double-click to type name&quot;, &quot;Don&#39;t care&quot;, &quot;Confirm&quot;))
+]
+#Congratulations 
 &lt;style&gt; img {
 	max-width:100%;
 	max-height:100%;
@@ -2395,9 +2448,9 @@ Maybe you want to try drafting a schedule first...
 
 
 [[Have you finished?-&gt;Final Reflection]]
-</tw-passagedata><tw-passagedata pid="59" name="Introduction + Learning Objectives" tags="" position="388,123" size="100,100">(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
-#(text-color:#64A79B)[Introduction] 
-&lt;style&gt; img {
+</tw-passagedata><tw-passagedata pid="59" name="Introduction + Learning Objectives" tags="" position="406,122" size="100,100">(align:&quot;=&gt;&lt;=====&quot;)+(box:&quot;=X&quot;)[[Back to Home Page-&gt;Digital Art Curriculum]]
+\#(text-color:#64A79B)[Introduction] 
+\&lt;style&gt; img {
 	max-width:100%;
 	max-height:100%;
 }
@@ -2414,11 +2467,12 @@ Students will be creating a final project and through finishing students will be
 * Students will understand the basics to coding
 * Students will assess learning through creativity in Twine
 * Students will be able to create a message through a piece of digital art
-* Students will be (text-color:#64A79B)[discovering], (text-color:#64A79B)[exploring], (text-color:#64A79B)[producing], and (text-color:#64A79B)[presenting] a piece
- (align:&quot;&lt;==&quot;)+(box:&quot;=========XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=====================&quot;)[(text-color:#64A79B)[&#39;&#39;Discover:&#39;&#39;] Students will be reading and understanding stories and websites.
- (text-color:#64A79B)[&#39;&#39;Explore:&#39;&#39;] Students will be researching digital art and stories and drafting ideas.
- (text-color:#64A79B)[&#39;&#39;Produce:&#39;&#39;] Students will be developing and prototyping short stories as well as a final prompt.
- (text-color:#64A79B)[&#39;&#39;Present:&#39;&#39;] Students will be presenting their projects to peers as well as explaining their creation process and demonstrating their workflow.]&lt;objectives|
+* Students will be (text-color:#64A79B)[discovering]&lt;discovering|, (text-color:#64A79B)[exploring]&lt;exploring|, (text-color:#64A79B)[producing]&lt;producing|, and (text-color:#64A79B)[presenting]&lt;presenting| a piece
+ (align:&quot;&lt;==&quot;)+(box:&quot;=========XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=====================&quot;)[(click: ?discovering)[(text-color:#64A79B)[&#39;&#39;Discover:&#39;&#39;] Students will be reading and understanding stories and websites.]
+(click: ?exploring)[(text-color:#64A79B)[&#39;&#39;Explore:&#39;&#39;] Students will be researching digital art and stories and drafting ideas.]
+(click: ?producing)[(text-color:#64A79B)[&#39;&#39;Produce:&#39;&#39;] Students will be developing and prototyping short stories as well as a final prompt.]
+(click: ?presenting)[(text-color:#64A79B)[&#39;&#39;Present:&#39;&#39;] Students will be presenting their projects to peers as well as explaining their creation process and demonstrating their workflow.]
+\]&lt;objectives|
 
 
 This will be graded on if students have interacted with all of the inputs.
@@ -2429,10 +2483,9 @@ This will be graded on if students have interacted with all of the inputs.
 * Basic computer literacy of interacting through websites (refreshing the page, pressing buttons, navigating a website, etc.)
 * Basic Knowledge of how to download programs
 	
-&#39;&#39;Type your name below to acknowledge this (First Name Last Name)--
-&#39;&#39;(input-box:2bind $Name,&quot;=XX=&quot;,&quot;Double-click the text to sign your name.&quot;)
-(set: $OfficialName to $Name)
-(if: $OfficialName is not 0)[You previously answered &quot;$OfficialName&quot;. Typing again will change your answer.]
+&#39;&#39;Type your name below to acknowledge this (First Name Last Name):
+&#39;&#39;(input-box:2bind $Name,&quot;=XX=&quot;,2,&quot;Double-click the text to sign your name.&quot;)
+(if: $Name is not 0)[You previously answered &quot;$Name&quot;. Typing again will change your answer.]
 
 [[Now let&#39;s test your knowledge-&gt;What exactly is digital art? (exercise)]]
 
@@ -2593,26 +2646,49 @@ https://okuha.com/digital-art-styles-and-types/
 * Select at least 6.
 Checkmark below.
 (checkbox: 2bind $2DDigitalPainting,&quot;2D Digital Painting&quot;)
+\(if: $2DDigitalPainting is true)[(set: $2DDigitalPainting to &quot;2D Digital Painting&quot;)]
 (checkbox: 2bind $3DDigitalPainting3DSculpting,&quot;3D Digital Painting And 3D Sculpting&quot;)
+\(if: $3DDigitalPainting3DSculpting is true)[(set: $3DDigitalPainting3DSculpting to &quot;3D Digital Painting and 3D Sculpting&quot;)]
 (checkbox: 2bind $PixelArt,&quot;Pixel Art&quot;)
+\(if: $PixelArt is true)[(set: $PixelArt to &quot;Pixel Art&quot;)]
 (checkbox: 2bind $FractalArt,&quot;Fractal Art&quot;)
+\(if: $FractalArt is true)[(set: $FractalArt to &quot;Fractal Art&quot;)]
 (checkbox: 2bind $AlgorithmicArt,&quot;Algorithmic Art&quot;)
+\(if: $AlgorithmicArt is true)[(set: $AlgorithmicArt to &quot;Algorithmic Art&quot;)]
 (checkbox: 2bind $DigitalPhotography,&quot;Digital Photography&quot;)
+\(if: $DigitalPhotography is true)[(set: $DigitalPhotography to &quot;Digital Photography&quot;)]
 (checkbox: 2bind $VRPainting,&quot;VR Painting&quot;)
+\(if: $VRPainting is true)[(set: $VRPainting to &quot;VR Painting&quot;)]
 (checkbox: 2bind $2DComputerGraphics,&quot;2D Computer Graphics&quot;)
+\(if: $2DComputerGraphics is true)[(set: $2DComputerGraphics to &quot;2D Computer Graphics&quot;)]
 (checkbox: 2bind $3DComputerGraphics,&quot;3D Computer Graphics&quot;)
+\(if: $3DComputerGraphics is true)[(set: $3DComputerGraphics to &quot;3D Computer Graphics&quot;)]
 (checkbox: 2bind $PhotoBashing,&quot;Photo Bashing&quot;)
+\(if: $PhotoBashing is true)[(set: $PhotoBashing to &quot;Photo Bashing&quot;)]
 (checkbox: 2bind $DataMoshing,&quot;Data-Moshing&quot;)
+\(if: $DataMoshing is true)[(set: $DataMoshing to &quot;Data Moshing&quot;)]
 (checkbox: 2bind $DynamicPainting,&quot;Dynamic Painting&quot;)
+\(if: $DynamicPainting is true)[(set: $DynamicPainting to &quot;Dynamic Painting&quot;)]
 (checkbox: 2bind $DigitalCollage,&quot;Digital Collage&quot;)
+\(if: $DigitalCollage is true)[(set: $DigitalCollage to &quot;Digital Collage&quot;)]
 (checkbox: 2bind $RasterPainting,&quot;Raster Painting&quot;)
+\(if: $RasterPainting is true)[(set: $RasterPainting to &quot;Raster Painting&quot;)]
 (checkbox: 2bind $VectorArt,&quot;Vector Art&quot;)
+\(if: $VectorArt is true)[(set: $VectorArt to &quot;Vector Art&quot;)]
 (checkbox: 2bind $IntegratedArt,&quot;Integrated Art&quot;)
+\(if: $IntegratedArt is true)[(set: $IntegratedArt to &quot;Integrated Art&quot;)]
 (checkbox: 2bind $MixedMedia,&quot;Mixed Media&quot;)
+\(if: $MixedMedia is true)[(set: $MixedMedia to &quot;Mixed Media&quot;)]
 (checkbox: 2bind $ComputerGeneratedDigitalPainting,&quot;Computer-Generated Digital Painting&quot;)
+\(if: $ComputerGeneratedDigitalPainting is true)[(set: $ComputerGeneratedDigitalPainting to &quot;Computer Generated Digital Painting&quot;)]
 (checkbox: 2bind $ProjectionMapping,&quot;Projection Mapping&quot;)
+\(if: $ProjectionMapping is true)[(set: $ProjectionMapping to &quot;Projection Mapping&quot;)]
 (checkbox: 2bind $Interactive,&quot;Interactive Art&quot;)
+\(if: $Interactive is true)[(set: $Interactive to &quot;Interactive Art&quot;)]
 (checkbox: 2bind $WebDesign,&quot;Web Design&quot;)
+\(if: $WebDesign is true)[(set: $WebDesign to &quot;Web Design&quot;)]
+
+
 
 [[Now for what we will be learning-&gt;Interactive Art Introduction]]
 (enchant:?link,
@@ -2627,8 +2703,16 @@ Checkmark below.
 )
 (enchant:?page,
      (text-color:black)+
-     (background:white)+
-     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="66" name="Very Basic Changing the Look" tags="" position="807,864" size="100,100">#(text-color:#64A79B)[Changing the Look]
+     (background:(gradient: 160, 0,#E6EBC8,1,#C1D2E7,1,#F8F7FF))+
+     (font:&quot;Open Sans&quot;)
+)
+(enchant:?passage,
+	(background:(white)) +
+	(corner-radius:20) +
+	(border:&quot;solid&quot;)+
+	(border-size:3)+
+	(border-color:(white))
+)</tw-passagedata><tw-passagedata pid="66" name="Very Basic Changing the Look" tags="" position="807,864" size="100,100">#(text-color:#64A79B)[Changing the Look]
 ---
 
 Notice how in your basic links when you press &#39;&#39;Play&#39;&#39; all you get is a dark background with white text and blue for the links, 
@@ -2660,6 +2744,9 @@ Copy the following link if the button above doesn&#39;t workhttps://htmlcolorcod
 Here is an easy code to change the color of a particular piece of text:
 &lt;img src = &quot;images/colorenchant.png&quot; /&gt;
 
+&#39;&#39;Practice:&#39;&#39;
+Input a color code below and click the &quot;process&quot; button.
+(input-box:2bind $Color,&quot;=XX=&quot;,1)
 
 	
 [[Let&#39;s Practice-&gt;Color Changing Exercise #1]]
@@ -2768,6 +2855,13 @@ Now that we have the bare bones structure of websites we can finally get into &#
 &lt;/style&gt;
 &#39;&#39;Create an interactive maze where audiences have to escape.&#39;&#39;
 &lt;img src = &quot;https://i.pinimg.com/originals/f8/b9/15/f8b9152de94624b0bae211d81c749343.png&quot; /&gt;
+
+&#39;&#39;Create a variable called Player and Health.&#39;&#39;
+
+Give Player a Name and give Health a certain value
+* The &quot;Player Name&quot; will be a text string
+* The &quot;Health&quot; will be a Number Value
+
 &#39;&#39;You can shape your maze by the following:&#39;&#39;
 If they reach a certain passage they will be congratulated.
 * Maybe you can reward them with an item
@@ -2915,7 +3009,7 @@ If you have finished learning - [[Continue-&gt;Basic Design]]
 (enchant:?page,
      (text-color:black)+
      (background:white)+
-     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="73" name="Start to Basic Twine Coding" tags="" position="785,378" size="100,100">#(text-color:#64A79B)[Time for Basic Coding]
+     (font:&quot;Open Sans&quot;))</tw-passagedata><tw-passagedata pid="73" name="Start to Basic Twine Coding" tags="" position="769,371" size="100,100">#(text-color:#64A79B)[Time for Basic Coding]
 ---
 Now that we have been able to learn how to officially make Twine works. Let us move onto very basic coding.
 
@@ -2967,8 +3061,7 @@ Remember:
 
 Here is an &#39;&#39;article on constructive criticism&#39;&#39;.
 https://www.nownovel.com/blog/constructive-writing-feedback/
-(link: &quot;Constructive Writing Feedback&quot;)[(open-url: &quot;https://www.nownovel.com/blog/constructive-writing-feedback/
-&quot;)]
+(link: &quot;Constructive Writing Feedback&quot;)[(open-url: &quot;https://www.nownovel.com/blog/constructive-writing-feedback/&quot;)]
 (text-style:&quot;superscript&quot;)[Copy if button above doesn&#39;t work https://www.nownovel.com/blog/constructive-writing-feedback/]
 
 
@@ -3194,7 +3287,7 @@ For Website Creation:
 	(border:&quot;solid&quot;)+
 	(border-size:3)+
 	(border-color:(white))
-)</tw-passagedata><tw-passagedata pid="80" name="Curriculum Review" tags="" position="2262,753" size="100,100">#Curriculum Review
+)</tw-passagedata><tw-passagedata pid="80" name="Curriculum Review" tags="" position="2258,751" size="100,100">#Curriculum Review
 How has your thinking changed over the course?
 ---
 &#39;&#39;Here are all of your selections and inputs through the past curriculum.&#39;&#39;
@@ -3204,63 +3297,41 @@ How has your thinking changed over the course?
 &#39;&#39;Here is your previous definition:&#39;&#39;
 
 (if:$Definition is 0)[* I assume you know what digital art is already since, you &#39;&#39;did not&#39;&#39; give a definition]
-(else:)[&quot;(print: $Definition)&quot;]
+\(else:)[&quot;(print: $Definition)&quot;]
 
 (if: $DigitalArtInterests is true)[Before, you seemed to already have an interest in taking a career in digital art. &#39;&#39;Wonderful!&#39;&#39;(checkbox: 2bind $benefit,&quot;Click here if you thought this curriculum benefited you.&quot;)]
 
-&#39;&#39;You had an interest in the following:&#39;&#39;
-(if:$2DDigitalPainting is true)[(set: _2DDigitalPainting to &quot;2D Digital Painting&quot;)]
-(if:$3DDigitalPainting3DSculpting is true)[(set: _3DDigitalPainting3DSculpting to &quot;3D Digital Painting and 3D Sculpting&quot;)]
-(if:$PixelArt is true)[(set: _PixelArt to &quot;Pixel Art&quot;)]
-(if: $FractalArt is true)[(set: _FractalArt to &quot;Fractal Art&quot;)]
-(if: $AlgorithmicArt is true)[(set: _AlgorithmicArt to &quot;Algorithmic Art&quot;)]
-(if: $DigitalPhotography is true)[(set: _DigitalPhotography to &quot;Digital Photography&quot;)]
-(if: $VRPainting is true)[(set: _VRPainting to &quot;VR Painting&quot;)]
-(if: $2DComputerGraphics is true)[(set: _2DComputerGraphics to &quot;2D Computer Graphics&quot;)]
-(if: $3DComputerGraphics is true)[(set: _3DComputerGraphics to &quot;3D Computer Graphics&quot;)]
-(if: $PhotoBashing is true)[(set: _PhotoBashing to &quot;Photo Bashing&quot;)]
-(if: $DataMoshing is true)[(set: _DataMoshing to &quot;Data Moshing&quot;)]
-(if: $DynamicPainting is true)[(set: _DynamicPainting to &quot;Dynamic Painting&quot;)]
-(if: $DigitalCollage is true)[(set: _DigitalCollage to &quot;Digital Collage&quot;)]
-(if: $VectorArt is true)[(set: _VectorArt to &quot;Vector Art&quot;)]
-(if: $IntegratedArt is true)[(set: _IntegratedArt to &quot;Integrated Art&quot;)]
-(if: $MixedMedia is true)[(set: _MixedMedia to &quot;Mixed Media&quot;)]
-(if: $ComputerGeneratedDigitalPainting is true)[(set: _ComputerGeneratedDigitalPainting to &quot;Computer Generated Digital Painting&quot;)]
-(if: $ProjectionMapping is true)[(set: _ProjectionMapping to &quot;Projection Mapping&quot;)]
-(if: $Interactive is true)[(set: _Interactive to &quot;&#39;&#39; Interactive Art&#39;&#39;&quot;)]
-(if: $WebDesign is true)[(set: _WebDesign to &quot;Web Design&quot;)]
-
-You were interested in the following: (print: _2DDigitalPainting, _3DDigitalPainting3DSculpting, _PixelArt, _FractalArt, _AlgorithmicArt, _DigitalPhotography, _VRPainting, _2DComputerGraphics, _3DComputerGraphics, _PhotoBashing, _DataMoshing, _DynamicPainting, _DigitalCollage, _VectorArt, _IntegratedArt, _MixedMedia, _ComputerGeneratedDigitalPainting, _ProjectionMapping, _Interactive, _WebDesign)
-
-
-(if:$2DDigitalPainting is true)[- 2D Digital Painting]
-(if:$3DDigitalPainting3DSculpting is true)[- 3D Digital Painting and 3D Sculpting]
-(if:$PixelArt is true)[- Pixel Art]
-(if: $FractalArt is true)[- Fractal Art]
-(if: $AlgorithmicArt is true)[- Algorithmic Art]
-(if: $DigitalPhotography is true)[- Digital Photography]
-(if: $VRPainting is true)[- VR Painting]
-(if: $2DComputerGraphics is true)[- 2D Computer Graphics]
-(if: $3DComputerGraphics is true)[- 3D Computer Graphics]
-(if: $PhotoBashing is true)[- Photo Bashing]
-(if: $DataMoshing is true)[- Data Moshing]
-(if: $DynamicPainting is true)[- Dynamic Painting]
-(if: $DigitalCollage is true)[- Digital Collage]
-(if: $VectorArt is true)[- Vector Art]
-(if: $IntegratedArt is true)[- Integrated Art]
-(if: $MixedMedia is true)[- Mixed Media]
-(if: $ComputerGeneratedDigitalPainting is true)[- Computer Generated Digital Painting]
-(if: $ProjectionMapping is true)[- Projection Mapping]
-(if: $Interactive is true)[ &#39;&#39;- Interactive Art&#39;&#39;]
-(if: $WebDesign is true)[- Web Design]
-
+&#39;&#39;You had an interest in the following:&#39;&#39; 
+(if:$2DDigitalPainting is true)[| 2D Digital Painting]
+\(if:$3DDigitalPainting3DSculpting is true)[ | 3D Digital Painting and 3D Sculpting]
+\(if:$PixelArt is true)[ | Pixel Art,]
+\(if: $FractalArt is true)[ | Fractal Art]
+\(if: $AlgorithmicArt is true)[ | Algorithmic Art]
+\(if: $VRPainting is true)[ | VR Painting]
+\(if: $2DComputerGraphics is true)[ | 2D Computer Graphics]
+\(if: $3DComputerGraphics is true)[ | 3D Computer Graphics]
+\(if: $PhotoBashing is true)[ | Photo Bashing]
+\(if: $DataMoshing is true)[ | Data Moshing]
+\(if: $DynamicPainting is true)[ | Dynamic Painting]
+\(if: $DigitalCollage is true)[ | Digital Collage]
+\(if: $VectorArt is true)[ | Vector Art]
+\(if: $IntegratedArt is true)[ | Integrated Art]
+\(if: $RasterPainting is true)[ | Raster Painting]
+\(if: $MixedMedia is true)[ | Mixed Media]
+\(if: $ComputerGeneratedDigitalPainting is true)[ | Computer Generated Digital Painting]
+\(if: $ProjectionMapping is true)[ | Projection Mapping,]
+\(if: $Interactive is true)[ | &#39;&#39;Interactive Art&#39;&#39;]
+\(if: $WebDesign is true)[ | Web Design]
+\ |
 (if: $userlearned is true)[&#39;&#39;At the end of this curriculum you learned:&#39;&#39; &quot;(print: $userlearned)&quot;]
 (else:)[Did you learn anything? You &#39;&#39;did not&#39;&#39; answer the reflection.]
 
 
-
-
 [[Anyways Here is your Certificate-&gt;Certificate]]
+(enchant: &quot;|&quot;,
+	(color: #7EBDB2)
+)
+
 (enchant:?link,
 	(background:#7EBDB2) +
 	(border:&#39;solid&#39;) +
